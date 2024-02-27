@@ -23,7 +23,7 @@
         <button routerLink=""class="register"  *ngIf="isloggedIn()"  (click)="logout()"  color="accent">
           Logout
         </button>
-        <button   routerLink="Admin" class="admin" *ngIf="isAdminLogged()"  color="accent" aria-label="Example icon-button with heart icon">
+        <button   routerLink="Admin" class="admin" *ngIf="admin()"  color="accent" aria-label="Example icon-button with heart icon">
           admin
         </button>
       </div>
