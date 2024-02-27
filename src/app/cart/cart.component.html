@@ -1,0 +1,92 @@
+<section>
+
+
+    <div class="container">
+        <div class="row">
+            <h3>My Cart</h3>
+            <hr>
+            <div class="col-8">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+
+        
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="product">
+                        <th mat-header-cell *matHeaderCellDef> <b>Product Name</b> </th>
+                        <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+                    </ng-container>
+
+                    <!-- Weight Column -->
+                    <ng-container matColumnDef="price">
+                        <th mat-header-cell *matHeaderCellDef> <b>Price </b> </th>
+                        <td mat-cell *matCellDef="let element"> {{element.productPrice}} </td>
+                    </ng-container>
+
+                    <!-- Symbol Column -->
+                    <ng-container matColumnDef="quantity">
+                        <th mat-header-cell *matHeaderCellDef> <b>quantity</b> </th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-mini-fab color="primary" class="dec" (click)="deleteProduct(element.productId)"  >-</button>
+                            &nbsp; {{element.productQuantity}} &nbsp;
+                            <button  mat-mini-fab  color="accent" class="inc"  (click)="addToCart(element.productId)" >+</button> </td>
+                    </ng-container>
+
+                    <!-- <ng-container matColumnDef="totalPrice">
+                        <th mat-header-cell *matHeaderCellDef> <b>totalPrice</b> </th>
+                        <td mat-cell *matCellDef="let element"> {{element.totalPrice}} </td>
+                    </ng-container> -->
+
+
+                    <ng-container matColumnDef="delete">
+                        <th mat-header-cell *matHeaderCellDef>Remove from cart</th>
+                        <td mat-cell *matCellDef="let element"> 
+                            <button  mat-icon  color="warn"  (click)="removeProduct(element.productId)" class="ms-3 delete-icon border-0  px-3 py-3 rounded-5 " >
+                            <i class="fa-solid fa-trash fa-xl " color="warn" style="color: #ff0000;"></i>
+                            </button> 
+                        </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </div>
+
+            <div class="col-4">
+                <div class="checkout">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                            <mat-card-title>CheckOut</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <!-- <hr> -->
+                            <!-- <span class="subtotal">SubTotal :</span><span></span> -->
+                            <!-- <br>
+                            <span class="gst">GST</span>: <span></span> -->
+                            <!-- <br> -->
+                            <hr>
+                            <!-- <div class="discount ">
+                                <div class="coupon">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Apply coupon" >
+                                      </mat-form-field> 
+                                      <button mat-raised-button color="primary" class="ms-2 px-3">Apply</button>
+                                </div>
+                                <hr>
+
+                            </div> -->
+
+                            <span class="total-price">Total Price : {{cartTotalPrice}}&nbsp;</span><span class="total-price"></span>
+
+                        </mat-card-content>
+                        <button mat-raised-button color="warn" class="mx-2 my-3"  (click)="placeOrder(cartId)">PlaceOrder</button>
+                        <!-- <mat-card-actions>
+                           
+                          
+                        </mat-card-actions> -->
+                    </mat-card>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

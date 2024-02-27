@@ -1,0 +1,40 @@
+<section class="login-section">
+
+
+<!-- <hr>
+<br> -->
+<div class="container ">
+    <div class="row    ">
+        <div class="col-md-6   mt-5  ">
+
+            <form action=""  class=" "[formGroup]="LoginForm" (ngSubmit)="onSubmitLogin()">
+                <h2 class="login-head">Login here...</h2>
+                <div>
+                    <td><mat-form-field class="example-full-width username">
+                            <mat-label>Username</mat-label>
+                            <input matInput formControlName="username" class="username h-100 ">
+                        </mat-form-field></td>
+
+                </div>
+
+                <div>
+                    <td><mat-form-field> <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                        <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </a>
+                    </mat-form-field></td>
+                </div>
+
+                <button  mat-raised-button color="accent" [disabled]="!allFieldsFilled()"   class="ms-5">Login</button>
+            </form>
+
+        </div>
+        <div class="col-md-6">
+            <img src="assets/img/login.avif" style="width: 490px;" class=" img-fluid " alt="">
+        </div>
+
+    </div>
+</div>
+</section>

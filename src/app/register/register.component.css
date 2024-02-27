@@ -1,0 +1,18 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .username{
+    margin-right: 35px;
+  }
+
+  .register-head{
+    color: rgb(245, 140, 140);
+    font-weight: bold;
+  }

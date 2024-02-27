@@ -1,0 +1,32 @@
+<div class="navbar container-fluid  ">
+    <mat-toolbar class="toolbar">
+  
+      <h1 class="logo fw-bolder">Khaao<i class="fa-solid fa-utensils fa-sm" style="color: #ffffff;"></i></h1>
+      <div class="nav">
+        <a routerLink=""class="nav-link">Home</a>
+        <!-- <a routerLink="" class="nav-link">About</a> -->
+        <!-- <a routerLink="" class="nav-link">Contact</a> -->
+        <a routerLink="Product"  class="nav-link">Products</a>
+        <a routerLink="Orders"  class="nav-link">Orders</a>
+      </div>
+      
+      <div class="right-nav mt-2">
+          <a routerLink="Cart" class="cart " aria-label="Example icon-button with heart icon"  >
+            <i class="fa-sharp fa-solid fa-cart-shopping fa-xl " style="color: #ffffff;"></i>
+          </a>
+        <button   routerLink="Login" class="login" *ngIf="!isloggedIn()"   color="accent" aria-label="Example icon-button with heart icon">
+          Login
+        </button>
+        <button routerLink="Register"  *ngIf="!isloggedIn()"  class="register" color="accent">
+          Register
+        </button>
+        <button routerLink=""class="register"  *ngIf="isloggedIn()"  (click)="logout()"  color="accent">
+          Logout
+        </button>
+        <button   routerLink="Admin" class="admin" *ngIf="isAdminLogged()"  color="accent" aria-label="Example icon-button with heart icon">
+          admin
+        </button>
+      </div>
+  
+    </mat-toolbar>
+  </div>

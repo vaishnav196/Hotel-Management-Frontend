@@ -1,0 +1,26 @@
+table {
+    width: 100%;
+  }
+  .example-card {
+    max-width: 400px;
+  }
+.total-price,.subtotal{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+  mat-card{
+    box-shadow: 7px 7px 10px rgb(48, 48, 48);
+  }
+
+  .fa-xl{
+    cursor: pointer;
+    
+  }
+  mdc-line-ripple--active{
+    border-bottom: rgb(255, 3, 150);
+  }
+  .delete-icon:hover{
+    background-color: rgb(253, 205, 205);
+    color: white;
+   
+  }

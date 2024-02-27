@@ -1,0 +1,29 @@
+
+<section class="product-section">
+
+
+<div class="container">
+    <div class="row">
+      <h3 class=" product-head">Order your Favourite Food Online....</h3>
+      <hr>
+        <div class="col-md-3"*ngFor="let product of products" >
+          <mat-card class="example-card mt-4"  >
+           
+            <img mat-card-image src="assets/img/food5.avif" alt="Photo of a Shiba Inu">
+            <mat-card-title class="titile px-3">{{product.productName}}</mat-card-title>
+                <mat-card-subtitle class="price px-3"><h5>{{product.price| currency:'INR'}}</h5></mat-card-subtitle>
+                <mat-card-subtitle class="desc px-3"><span>{{product.productDesc}} amet consectetur adipisicing elit. Vero, debitis loremipusuem sodium isudgi</span></mat-card-subtitle>
+                <!-- <div class="buttons d-flex justify-content-center  p-3">
+                  <button mat-raised-button color="primary" (click)="dec()">-</button> &nbsp; {{quantity}} &nbsp;<button mat-raised-button color="primary" (click)="inc(product.productId)">+</button>
+                </div> -->
+
+            <button mat-raised-button color="accent" class="addtocart mb-5  py-2 "  (click)="addToCart(this.cartId,product)">Add to Cart</button>
+          </mat-card>
+        </div>
+
+      
+    </div>
+</div>
+</section>
+
+

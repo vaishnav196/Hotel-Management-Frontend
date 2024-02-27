@@ -1,0 +1,23 @@
+.home-text h1{
+    color: rgb(247, 72, 72);
+    font-size: 4.5rem;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif
+}
+.home-text p{
+    color: rgb(0, 0, 0);
+    width: 70%;
+    font-size: 18px;
+   font-family: 'Courier New', Courier, monospace;
+  font-weight:500;
+
+}
+.home-text{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+.order-button:hover{
+    background-color: rgb(255, 118, 103);
+    color: black;
+}

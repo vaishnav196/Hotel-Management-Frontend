@@ -1,0 +1,18 @@
+/* .example-full-width {
+    width: 100%;
+  } */
+
+  .username{
+    margin-right: 35px;
+  }
+  .login-head{
+    color: rgb(211, 122, 122);
+    font-weight: bold;
+  }
+  .login-section{
+    background-color: rgba(255, 255, 255, 0.215)
+  }
+
+  mat-form-field {
+    width: 170%; 
+   }
