@@ -48,7 +48,7 @@ export class AdminComponent implements OnInit {
     });
 
    console.log(this.productForm.value);
-
+    this.router.navigateByUrl('/Product')
   }
 
   allFieldsFilled(): boolean {
