@@ -14,6 +14,7 @@ export class LoginService {
 
   login(credentials:any): Observable<any>{
       this.islogged=true;
+      this.isAdminLoged=false;
     return this.http.post(`${this.url}`,credentials);
   }
 
@@ -30,6 +31,7 @@ export class LoginService {
    localStorage.removeItem('token');
    localStorage.removeItem('cartId');
    localStorage.removeItem('userId');
+  
    return this.islogged=false;
   }
 
