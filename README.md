@@ -11,3 +11,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ![Product](https://github.com/vaishnav196/Hotel-Management-Frontend/assets/107029372/86d802d4-99a4-42c1-8d54-7b4ee754fc13)
 
 ![Cart](https://github.com/vaishnav196/Hotel-Management-Frontend/assets/107029372/de074e53-b51f-413b-baa9-94cfd44fdac9)
+
+![Orders](https://github.com/vaishnav196/Hotel-Management-Frontend/assets/107029372/bd053be8-af06-436e-bff8-dd678921195a)
